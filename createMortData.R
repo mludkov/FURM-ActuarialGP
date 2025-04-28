@@ -21,11 +21,11 @@ createMortData = function(year_start,year_end,age_start,age_end,sex,sex_cat){
   }
   
   # import death text files:
-  D = read.multiple.files(".", pattern="death[[:graph:]]+.txt", DEL = "death")
+  D = read.multiple.files("./datasets/", pattern="death[[:graph:]]+.txt", DEL = "death")
   D = data.table::as.data.table(D)
   
   # import exposure text files:
-  E = read.multiple.files(".", pattern="exposure[[:graph:]]+.txt", DEL = "exposure")
+  E = read.multiple.files("./datasets/", pattern="exposure[[:graph:]]+.txt", DEL = "exposure")
   E = data.table::as.data.table(E)
   
   # convert Age in both files to numeric format:
